@@ -7,10 +7,9 @@ import SkillsIcons from './SkillsIcons/SkillsIcons';
 const Wrapper = styled.section`
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100%; 
   margin: 0 auto;
   text-align: center;
-  background-color: pink;
   overflow: auto;
 `;
 
@@ -19,7 +18,6 @@ const StyledH1 = styled.h1`
   text-align: center;
   text-transform: uppercase;
   margin-top: 40px;
-  color: teal;
   padding-top: 6em;
 `;
 

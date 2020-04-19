@@ -13,6 +13,9 @@ const BarSection = styled.section`
   display: inline-block;
   margin-left: 10%; 
   justify-content: space-between;
+  overflow: auto;
+
+  padding-bottom: 50%;
 `;
 
 const StyledH2 = styled.h2`
@@ -21,8 +24,7 @@ min-width: 800px;
 margin: 0 auto 10px;
 line-height: 25px;
 font-size: 20px;
-color: #fff;
-padding:0 0 0 10px;
+padding: 0 0 0 10px;
 position: relative;
 text-align: left;
 `;
@@ -31,7 +33,7 @@ const BottomBar = styled.div`
    width: 80%;
    height: 40px;
    margin: 10px;
-   background: #ffffff;
+   background: black;
    `;
 
 const CSS = styled.div`
@@ -40,8 +42,7 @@ const CSS = styled.div`
    border: 1px solid rgba(0, 0, 0, .2);
    background: #00e3bd;
    animation: ${KeyframesBlue} 2s ease-in-out 0s forwards;
-   
-   
+      
 `;
 const JAVASCRIPT = styled.div`
    width: 60%;
@@ -59,6 +60,20 @@ const HTML = styled.div`
 `;
 const Bootstrap = styled.div`
    width: 60%;
+   height: 40px;
+   border: 1px solid rgba(0, 0, 0, .2);
+   background: #00e3bd;
+   animation: ${KeyframesGreen} 2s ease-in-out 0s forwards;
+`;
+const ReactJS = styled.div`
+   width: 60%;
+   height: 40px;
+   border: 1px solid rgba(0, 0, 0, .2);
+   background: #00e3bd;
+   animation: ${KeyframesGreen} 2s ease-in-out 0s forwards;
+`;
+const NODE = styled.div`
+   width: 70%;
    height: 40px;
    border: 1px solid rgba(0, 0, 0, .2);
    background: #00e3bd;
@@ -82,6 +97,14 @@ export const SkillsIcons = () => (
         <StyledH2>BOOTSTRAP</StyledH2>
         <BottomBar>
             <Bootstrap />
+        </BottomBar>
+        <StyledH2>REACT</StyledH2>
+        <BottomBar>
+            <ReactJS />
+        </BottomBar>
+        <StyledH2>NODE</StyledH2>
+        <BottomBar>
+            <NODE />
         </BottomBar>
     </BarSection>
 );

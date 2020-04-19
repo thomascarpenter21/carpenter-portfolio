@@ -7,13 +7,11 @@ const Wrapper = styled.section`
   height: 100%;
   z-index: 1;
   text-align: center;
-  background-color: pink;
 `;
 
 const StyledH1 = styled.h1`
   font-size: 2.5em;
   text-align: center;
-  color: teal;
   padding-top: 5em;
 `;
 

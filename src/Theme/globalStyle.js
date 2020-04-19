@@ -1,18 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Kavoon&family=Shrikhand&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html, body {
   height: 100%;
-  scroll-behavior: smooth; 
+  width: 100%; 
   padding: 0;
   margin: 0;
-  font-family: Roboto, sans-serif;
-  background-color: pink;
+  color: black;
+  overflow: auto;
+  /* font-family: Roboto, sans-serif; */
+  background-color: #e9ecee;
   min-height: 100%;  
 }
-h1 {
-  font-family: shrikhand;
+h1, p {
+  font-family: 'Lato', sans-serif;;
 }
 `;
 

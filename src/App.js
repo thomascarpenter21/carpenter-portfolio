@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Route, Switch, Router } from 'react-router-dom'; 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 import { Home } from './Home/Home';
 import { About } from './About/About';
 import { Skills } from './Skills/Skills';
@@ -7,31 +7,34 @@ import { Projects } from './Projects/Projects';
 import {Contact} from './Contact/Contact';
 import { NoMatch } from './NoMatch/NoMatch';
 import { NavigationBar } from './components/NavigationBar';
+import { Footer } from './components/Footer';
 import GlobalStyle from './Theme/globalStyle';
 import { ThemeProvider } from 'styled-components';
-
-//import { Layout } from './components/Layout';
+//import { Layouts } from './components/Layouts';
 
 const theme = {
   fonts: {
     mq: `
-    font-size: 2.5em;
+    font-size: 3.5em;
       @media only screen and (max-width: 767px) {
         font-size: 1.8em;
       }
       @media only screen and (max-width: 480px) {
         font-size: 0.8em;
       }`
-  }
-};
+    }
+  };
 
 class App extends Component {
   render() {
     return (
-        <Router>  
-        <ThemeProvider theme={theme}>
-        <GlobalStyle />  
+      <ThemeProvider theme={theme}>
+      <React.Fragment>
+        <GlobalStyle /> 
+        <Router>
         <NavigationBar />
+        <Footer /> 
+        {/* <Layouts> */}
               <Switch> 
                   <Route exact path="/" component={Home} />
                   <Route path="/about" component={About} />
@@ -40,8 +43,12 @@ class App extends Component {
                   <Route path="/contact" component={Contact} />
                   <Route component={NoMatch} />
               </Switch>
-              </ThemeProvider> 
-            </Router>
+              
+        {/* </Layouts>   */}
+
+            </Router>    
+      </React.Fragment>
+      </ThemeProvider> 
     );
   }
 }
